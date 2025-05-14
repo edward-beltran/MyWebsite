@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url("images/Siblings.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #000000;
+  padding: 20px;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tiles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 400px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 250px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+/* Custom colors per tile */
+.tile.portfolio {
+  background: #6C63FF;
+}
+
+.tile.business {
+  background: #00C897;
+}
+
+.tile.youtube {
+  background: #FF5757;
+}
+
+/* Icon styles */
+.tile img, .tile span.icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+/* For emojis if no image */
+.tile span.icon {
+  font-size: 40px;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .tiles-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
